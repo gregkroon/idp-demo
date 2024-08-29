@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: my-new-team
+  namespace: default
+  description: My New Team
+spec:
+  type: team
+  parent: some-parent-group # Replace with the actual parent group if any
+  children:
+    - my-new-subteam1
+    - user:default/my-new-user1

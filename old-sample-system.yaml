@@ -1,0 +1,8 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: my-old-system
+  namespace: default
+  description: My Old System
+spec:
+  owner: my-old-team
