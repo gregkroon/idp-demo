@@ -2,7 +2,7 @@ apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
   name: NewServiceForm
-  title: Create EC2  
+  title: Onboard new Service
   description: Onboarding a new service
   tags:
     - tf
@@ -35,6 +35,11 @@ spec:
           ui:field: HarnessAuthToken
     - title: Service Details
       properties:
+        servicetype:
+          title: Choose a servcie type
+          type: string
+          enum: ["Java", "Golang", "Python"]
+          default: Java
         cloud_provider:
           title: Choose a cloud provider
           type: string
