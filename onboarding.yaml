@@ -58,12 +58,12 @@ spec:
         subnet:
           title: Choose desired subnet
           type: string
-          enum: ["Create New", "subnet-16dad05b", "subnet-34da30rt", "subnet-76j1hag5", "subnet-94s21hr1"]
+          enum: ["subnet-16dad05b", "subnet-34da30rt", "subnet-76j1hag5", "subnet-94s21hr1"]
           default: subnet-16dad05b
         vpc:
           title: Choose VPC security group
           type: string
-          enum: ["Create New", "sg-078339fd2b4e5b1a5", "sg-024561fd2344e5brte", "sg-03sdf832dfe5b1n3"]
+          enum: ["sg-078339fd2b4e5b1a5", "sg-024561fd2344e5brte", "sg-03sdf832dfe5b1n3"]
           default: sg-078339fd2b4e5b1a5
         count:
           title: Choose desired instance count (i.e. How many VMs?)
@@ -72,17 +72,17 @@ spec:
         sla:
           title: Choose an SLA
           type: string
-          enum: ["Create New", "99.9", "99", "95"]
+          enum: ["99.9", "99", "95"]
           default: 99.9
         patchlevel:
           title: Choose a patch level
           type: string
-          enum: ["Create New", "2024-08", "2024-07", "2024-06"]
+          enum: ["2024-08", "2024-07", "2024-06"]
           default: 2024-08
         osversion:
           title: Choose a OS version
           type: string
-          enum: ["Create New", "Ubuntu 22.04 LTS", "Ubuntu 18.01 LTS", "Ubuntu 16.04 LTS"]
+          enum: ["Ubuntu 22.04 LTS", "Ubuntu 18.01 LTS", "Ubuntu 16.04 LTS"]
           default: Ubuntu 22.04 LTS
           
   steps:
