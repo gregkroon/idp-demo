@@ -90,7 +90,7 @@ spec:
       name: Provisioning your Infrastructure
       action: trigger:harness-custom-pipeline
       input:
-        url: 'https://app.harness.io/ng/account/JYdzbcVsR3i8NdVVDyM8TA/iacm/orgs/default/projects/KotakPoc/pipelines/pipelineec2modules/pipeline-studio/?storeType=INLINE'
+        url: 'https://app.harness.io/ng/account/Ke-E1FX2SO2ZAL2TXqpLjg/module/idp-admin/orgs/default/projects/airnz/pipelines/New_Service_Onboarding/pipeline-studio?storeType=INLINE'
         inputset:
           owner: ${{ parameters.owner }}
         apikey: ${{ parameters.token }}
