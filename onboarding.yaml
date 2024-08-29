@@ -1,9 +1,9 @@
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
-  name: harness_iac_ec2
+  name: NewServiceForm
   title: Create EC2  
-  description: EC2 instance for the App team 
+  description: Onboarding a new service
   tags:
     - tf
     - aws
@@ -24,7 +24,7 @@ spec:
           ui:field: OwnerPicker
           ui:options:
         github_repo:
-          title: What App/Repo will this infra be associated with?
+          title: What App/Repo will this service be associated with?
           type: string
           description: someRepoName
         # This field is hidden but needed to authenticate the request to trigger the pipeline
@@ -33,7 +33,7 @@ spec:
           type: string
           ui:widget: password
           ui:field: HarnessAuthToken
-    - title: Infrastructure Details
+    - title: Service Details
       properties:
         cloud_provider:
           title: Choose a cloud provider
@@ -69,6 +69,22 @@ spec:
           title: Choose desired instance count (i.e. How many VMs?)
           type: string
           default: "1"
+        sla:
+          title: Choose an SLA
+          type: string
+          enum: ["Create New", "99.9", "99", "95"]
+          default: 99.9
+        patchlevel:
+          title: Choose a patch level
+          type: string
+          enum: ["Create New", "2024-08", "2024-07", "2024-06"]
+          default: 2024-08
+        osversion:
+          title: Choose a OS version
+          type: string
+          enum: ["Create New", "Ubuntu 22.04 LTS", "Ubuntu 18.01 LTS", "Ubuntu 16.04 LTS"]
+          default: Ubuntu 22.04 LTS
+          
   steps:
     - id: trigger
       name: Provisioning your Infrastructure
