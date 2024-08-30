@@ -22,12 +22,10 @@ spec:
           title: Choose the Owner
           type: string
           ui:field: OwnerPicker
-          ui:options:
         github_repo:
           title: What App/Repo will this service be associated with?
           type: string
           description: someRepoName
-        # This field is hidden but needed to authenticate the request to trigger the pipeline
         token:
           title: Harness Token
           type: string
@@ -35,8 +33,8 @@ spec:
           ui:field: HarnessAuthToken
     - title: Service Details
       properties:
-        servicetype:
-          title: Choose a servcie type
+        service_type:
+          title: Choose a service type
           type: string
           enum: ["Java", "Golang", "Python"]
           default: Java
@@ -51,7 +49,7 @@ spec:
           enum: ["VM"]
           default: VM
         instance_type:
-          title: Chose the Instance Type
+          title: Choose the Instance Type
           type: string
           enum: ["t2.micro", "t2.large", "t3.2xlarge", "other"]
           default: t2.micro
@@ -72,8 +70,8 @@ spec:
           default: sg-078339fd2b4e5b1a5
         count:
           title: Choose desired instance count (i.e. How many VMs?)
-          type: string
-          default: "1"
+          type: integer
+          default: 1
         sla:
           title: Choose an SLA
           type: string
@@ -85,9 +83,9 @@ spec:
           enum: ["2024-08", "2024-07", "2024-06"]
           default: 2024-08
         osversion:
-          title: Choose a OS version
+          title: Choose an OS version
           type: string
-          enum: ["Ubuntu 22.04 LTS", "Ubuntu 18.01 LTS", "Ubuntu 16.04 LTS"]
+          enum: ["Ubuntu 22.04 LTS", "Ubuntu 18.04 LTS", "Ubuntu 16.04 LTS"]
           default: Ubuntu 22.04 LTS
           
   steps:
@@ -104,3 +102,4 @@ spec:
     links:
       - title: Pipeline Details
         url: ${{ steps.trigger.output.PipelineUrl }}
+
