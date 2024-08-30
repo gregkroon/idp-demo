@@ -15,6 +15,6 @@ metadata:
     example.com/os-version: "Ubuntu 22.04 LTS"
 spec:
   type: Service
-  owner: new-sample-team
+  owner: my-new-team
   lifecycle: experimental
-  system: new-sample-system
+  system: my-new-system
