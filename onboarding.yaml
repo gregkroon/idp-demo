@@ -80,7 +80,7 @@ spec:
         patchlevel:
           title: Choose a patch level
           type: string
-          enum: ["2024-08""]
+          enum: ["2024-08"]
           default: 2024-08
         osversion:
           title: Choose an OS version
