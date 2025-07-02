@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: team-beta-service
+  description: The main service for Team Beta.
+  annotations:
+    # This component has a different query
+    servicenow.com/query: 'active=true^priority=2'
+spec:
+  type: service
+  lifecycle: experimental
+  owner: default-group
