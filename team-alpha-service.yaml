@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: team-alpha-service
+  description: The primary service for Team Alpha.
+  annotations:
+    # This query will be read by your context-aware widget
+    servicenow.com/query: 'active=true^priority=1'
+spec:
+  type: service
+  lifecycle: experimental
+  owner: default-group
